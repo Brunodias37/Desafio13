@@ -56,18 +56,12 @@ namespace Desafio13
                 void ListaTresMaioresSalarios()
                 {
                     var key = 3;
-                    var tresMaiorSalario =
-                        from client in clients
-                        orderby client.Salary descending
-                        select client;
 
-                    var c = tresMaiorSalario.Take(key).OrderBy(x => x.Name);
-
-                    foreach (var item in c)
+                    var tresMaiorSalario = clients.OrderByDescending(x => x.Salary).Take(key).OrderBy(x => x.Name);
+                    foreach (var item in tresMaiorSalario)
                     {
                         Console.WriteLine(item);
                     }
-
                     Console.WriteLine();
                     Console.WriteLine("Pressione ENTER para voltar ao menu");
                     Console.ReadKey();
