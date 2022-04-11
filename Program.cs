@@ -89,7 +89,7 @@ namespace Desafio13
                             break;
                         case 2:
                             ListaTresMaioresSalarios();
-                            Console.ReadKey();
+                            
                             break;
                         case 3:
                             Environment.Exit(0);
